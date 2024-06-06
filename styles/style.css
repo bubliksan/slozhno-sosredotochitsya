@@ -1,5 +1,258 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+/* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  color: var(--text-color, #f1b2ce);
+  background-image: url(../images/cover-image-dark.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: var(--main-color, #000028);
+
+}
+
+/* Секция общих элементов */
+
+.main-title {
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  font-weight: 700;
+  line-height: 129.53px;
+  color: var(--main-header-color, #db00ff);
+  text-shadow: 4px 4px 0 #ff0070;
+}
+
+.title__decor {
+  color: var(--main-color, #000028);
+  background-color: var(--text-background-color, #ff0070);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.4px;
+}
+
+.section {
+  padding-block-start: 80px;
+}
+
+.section:first-of-type {
+  padding-block-start: 60px;
+}
+
+.section:last-of-type {
+  padding-block-end: 60px;
+}
+
+.card__list {
+  display: grid;
+  gap: 20px;
+}
+
+.section__header {
+  color: var(--section-header-color, #ff0070);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.4px;
+}
+
+.article__text {
+  padding-block-start: 10px;
+  color: var(--text-color, #f1b2ce);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.4px;
+}
+
+.decorated-zone::after {  
+  position: absolute;
+  content: '';
+  top: 20px;
+  right: 20px;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border-right: 1px solid var(--menu-main-color);
+  border-top: 1px solid var(--menu-main-color);
+}
+
+.decorated-zone::before {
+  position: absolute;
+  content: '';
+  left: 20px;
+  bottom: 20px;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border-left: 1px solid var(--menu-main-color);
+  border-bottom: 1px solid var(--menu-main-color);
+}
+
+/* Секция заголовка */
+
+.header {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  block-size: 100vh;
+  min-block-size: 768px;
+  padding: 20px;
+}
+
+.header__theme-menu {
+}
+
+.header__decorated-text {
+  position: absolute;
+  block-size: 26px;
+  inline-size: 33px;
+  right: 48px;
+  top: 20px;
+  text-transform: uppercase;
+  line-height: 25px;
+  color: var(--text-background-color);
+}
+
+.header__decorated-text::after {
+  position: absolute;
+  content: '';
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 50%;
+  background-color: var(--text-background-color);
+  left: 43px;
+  top: 8px;
+  box-shadow: 0px 0px 4px 2px var(--text-background-color);
+}
+
+.header__theme-menu-list {
+  display: flex;
+  gap: 12px;              /* В макете 10, но уплывает в Pixel Perfect */
+  flex-direction: row;
+  justify-content: center;
+}
+
+.header__theme-menu-button {
+  padding: 1px 12.5px 5px;
+  background-color: transparent;
+  text-transform: lowercase;
+  line-height: 18px;
+  font-size: 18px;
+  color: var(--menu-main-color, #ff0070);
+  border: none;
+  transition: outline 0.6s;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--menu-main-color, #ff0070);
+  pointer-events: none;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--menu-buttons-outline-color);
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: transparent;
+  border-bottom: 1px solid var(--menu-main-color, #ff0070);
+}
+
+.header__title-text {
+  margin-inline-start: -20px;
+}
+
+.header__text {
+  margin-inline-start: calc(100% / 2);
+  margin-block-start: auto;
+  margin-block-end: auto;  
+}
+
+/* Секция основного контента */
+
+.card__list-first {
+  grid-template: repeat(2, 1fr) / minmax(236px, 1fr) 1fr 1fr; 
+}
+
+.card__header-first {
+  grid-row: 1 / span 2;
+}
+
+.section__header-first {
+  grid-row: 1 / span 2;
+}
+
+.card__section-first {
+  grid-column: 2 / span 2;
+}
+
+.text-link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 #ff0070;
+}
+
+.text-link:hover {
+  border-block-end: 1px solid var(--text-color);
+}
+
+/* Секция футера */
+
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 319px 0;
+}
+
+.footer__title-text {
+}
+
+/* Секция медиазапросов */
+
+@media (560px < width <= 800px) {
+
+  .header {
+    min-block-size: 1024px;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .header__theme-menu {
+    align-self: center;
+  }
+
+  .main-title {
+    line-height: 95.7px;
+  }
+
+  .header__text {
+}
+}
+
+@media (width <= 560px) {
+
+  .page {
+    padding: 0 10px;
+  }
+
+  .main-title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+
+  .header__theme-menu-list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .header__theme-menu {
+    align-self: center;
+  }
+
+  .header__text {
+    margin-inline-start: 0;
+    margin-block-start: 55px;
+    margin-block-end: 65px;  
+  }
 }

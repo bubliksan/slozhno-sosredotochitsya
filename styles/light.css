@@ -9,4 +9,31 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --display-change: none;
+  --main-color: #353430;
+  --menu-main-color: #333430;
+  --menu-buttons-outline-color: rgba(50 49 45 / .4);
+  --text-background-color: #ff8dcb;
+  --main-header-color: #ffc2e6;
+  background-image: url(../images/cover-image-light.png);
 }
+
+.header__decorated-text {
+  display: var(--display-change);
+}
+
+.header__decorated-text::after {  
+  display: var(--display-change);
+}
+
+@media (prefers-color-scheme: light) {
+  .page.theme_auto {
+    --display-change: none;
+    --main-color: #353430;
+    --menu-main-color: #333430;
+    --menu-buttons-outline-color: rgba(50 49 45 / .4);
+    --text-background-color: #ff8dcb;
+    --main-header-color: #ffc2e6;
+    background-image: url(../images/cover-image-light.png);
+    }
+  }

@@ -2,3 +2,14 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+:root {
+  --main-color: #000028;
+  --menu-main-color: #ff0070;
+  --menu-buttons-outline-color: rgba(255 0 112 / .4);
+  --text-background-color: #ff0070;
+  --main-header-color: #db00ff;
+  --section-header-color: #ff0070;
+  --text-color: #f1b2ce;
+  --main-padding: 0 20px;
+  --display-change: '';        /* Для удаления псевдоэлементов */
+}
