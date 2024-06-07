@@ -22,7 +22,7 @@
   display: var(--display-change);
 }
 
-.header__decorated-text::after {  
+.header__decorated-text::after {
   display: var(--display-change);
 }
 

@@ -10,6 +10,5 @@
   --main-header-color: #db00ff;
   --section-header-color: #ff0070;
   --text-color: #f1b2ce;
-  --main-padding: 0 20px;
   --display-change: '';        /* Для удаления псевдоэлементов */
 }
