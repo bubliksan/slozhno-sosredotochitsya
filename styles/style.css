@@ -168,7 +168,7 @@
 .header__text {
   margin-inline-start: calc(100% / 2);
   margin-block-start: auto;
-  margin-block-end: auto;  
+  margin-block-end: auto;
 }
 
 /* Секция основного контента */
@@ -178,7 +178,7 @@
 }
 
 .card__list-first {
-  grid-template: repeat(2, 1fr) / minmax(236px, 1fr) 1fr 1fr; 
+  grid-template: repeat(2, 1fr) / minmax(236px, 1fr) 1fr 1fr;
 }
 
 .card__header-first {
@@ -190,7 +190,7 @@
 }
 
 .card__list-second {
-  grid-template: repeat(2, min-content) / repeat(3, 1fr); 
+  grid-template: repeat(2, min-content) / repeat(3, 1fr);
 }
 
 .card__header-second {
@@ -199,6 +199,18 @@
 
 .section__header-second {
   padding-inline-end: calc(((100% - 40px) / 3) * 2 + 40px);
+}
+
+.card__list-third {
+  grid-template: repeat(6, min-content) / minmax(236px, 1fr) 1fr 1fr;
+}
+
+.card__section-third {
+  grid-column: 2 / span 2;
+}
+
+.title__decor-third {
+  font-weight: 400;
 }
 
 /* Секция футера */
@@ -266,6 +278,6 @@
   .header__text {
     margin-inline-start: 0;
     margin-block-start: 55px;
-    margin-block-end: 65px;  
+    margin-block-end: 65px;
   }
 }
