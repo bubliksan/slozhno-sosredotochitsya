@@ -45,6 +45,7 @@
 .card__list {
   display: grid;
   gap: 20px;
+  transition: all 500ms ease; /* Посмотреть */
 }
 
 .section__header {
@@ -190,7 +191,7 @@
 }
 
 .card__list-second {
-  grid-template: repeat(2, min-content) / repeat(3, 1fr);
+  grid-template: repeat(4, min-content) / repeat(3, 1fr);
 }
 
 .card__header-second {
@@ -213,6 +214,50 @@
   font-weight: 400;
 }
 
+.section-pictures {
+  max-inline-size: 100%;
+}
+
+.card__list-pictures {
+  grid-template: repeat(4, min-content) / repeat(3, 1fr);
+}
+
+.card__section-fourth {
+  grid-column: 1 / -1;
+}
+
+.picture__first {
+  grid-column: 1 / span 2;
+  grid-row: 2 / span 1;
+}
+
+.picture__second {
+  grid-column: 3 / span 1;
+  grid-row: 2 / span 2;
+}
+
+.picture__third {
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 2;
+}
+
+.picture__fourth {
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+}
+
+.picture__fifth {
+  grid-column: 2 / span 2;
+  grid-row: 4 / span 1;
+}
+
+.card__img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
 /* Секция футера */
 
 .footer {
@@ -225,14 +270,16 @@
   padding: 20px;
 }
 
+.footer__title-text {
+  text-shadow: 2px 2px 0 #ff0070;
+}
+
 /* Секция медиазапросов */
 
 @media (560px < width <= 800px) {
-
   .header {
     min-block-size: 1024px;
   }
-
   .header__theme-menu-list {
     flex-direction: column;
     justify-content: center;
@@ -241,40 +288,32 @@
   .header__theme-menu {
     align-self: center;
   }
-
   .main-title {
     line-height: 95.7px;
   }
-
   .card__list-second {
-    grid-template: 67px repeat(3, 1fr) / 1fr;
+    grid-template: repeat(4, min-content) / 100%;
   }
-
   .card__header-second {
     grid-column: 1 / span 1;
   }
 }
 
 @media (width <= 560px) {
-
   .page {
     padding: 0 10px;
   }
-
   .main-title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
-
   .header__theme-menu-list {
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
   }
-
   .header__theme-menu {
     align-self: center;
   }
-
   .header__text {
     margin-inline-start: 0;
     margin-block-start: 55px;
