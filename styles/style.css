@@ -215,47 +215,44 @@
 }
 
 .section-pictures {
-  max-inline-size: 100%;
-}
-
-.card__list-pictures {
+  display: grid;
+  gap: 20px;
   grid-template: repeat(4, min-content) / repeat(3, 1fr);
 }
 
-.card__section-fourth {
+.title__standalone {
   grid-column: 1 / -1;
-}
-
-.picture__first {
-  grid-column: 1 / span 2;
-  grid-row: 2 / span 1;
-}
-
-.picture__second {
-  grid-column: 3 / span 1;
-  grid-row: 2 / span 2;
-}
-
-.picture__third {
-  grid-column: 1 / span 1;
-  grid-row: 3 / span 2;
-}
-
-.picture__fourth {
-  grid-column: 2 / span 1;
-  grid-row: 3 / span 1;
-}
-
-.picture__fifth {
-  grid-column: 2 / span 2;
-  grid-row: 4 / span 1;
 }
 
 .card__img {
   inline-size: 100%;
-  block-size: 100%;
+  min-block-size: 100%;
   object-fit: cover;
-  object-position: 50% 50%;
+}
+
+.card__img-first {
+  grid-column: 1 / span 2;
+  grid-row: 2 / span 1;
+}
+
+.card__img-second {
+  grid-column: 3 / span 1;
+  grid-row: 2 / span 2;
+}
+
+.card__img-third {
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 2;
+}
+
+.card__img-fourth {
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+}
+
+.card__img-fifth {
+  grid-column: 2 / span 2;
+  grid-row: 4 / span 1;
 }
 
 /* Секция футера */
