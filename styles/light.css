@@ -15,15 +15,9 @@
   --menu-buttons-outline-color: rgba(50 49 45 / .4);
   --text-background-color: #ff8dcb;
   --main-header-color: #ffc2e6;
+  --text-color: #353430;
+  --section-header-color: #353430;
   background-image: url(../images/cover-image-light.png);
-}
-
-.header__decorated-text {
-  display: var(--display-change);
-}
-
-.header__decorated-text::after {
-  display: var(--display-change);
 }
 
 @media (prefers-color-scheme: light) {
