@@ -9,7 +9,6 @@
   background-size: cover;
   background-attachment: fixed;
   background-color: var(--main-color, #000028);
-
 }
 
 /* Секция общих элементов */
@@ -114,6 +113,7 @@
   right: 48px;
   top: 20px;
   text-transform: uppercase;
+  font-size: 18px;
   line-height: 25px;
   color: var(--text-background-color);
 }
@@ -297,11 +297,16 @@
 }
 
 @media (width <= 560px) {
-  .page {
-    padding: 0 10px;
+  .header {
+    padding: 10px;
+    min-block-size: 668px;
+  }
+  .header__title-text {
+    margin-inline-start: 0;
   }
   .main-title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    line-height: 95.7px;
   }
   .header__theme-menu-list {
     flex-direction: column;
@@ -313,7 +318,46 @@
   }
   .header__text {
     margin-inline-start: 0;
-    margin-block-start: 55px;
-    margin-block-end: 65px;
+  }
+  .decorated-zone::after {
+    top: 10px;
+    right: 10px;
+  }
+  .decorated-zone::before {
+    bottom: 10px;
+    left: 10px;
+  }
+  .header__decorated-text {
+    right: 38px;
+    top: 10px;
+  }
+
+  .content {
+    padding: 0 10px 0;
+  }
+
+  .card__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: all 500ms ease; /* Посмотреть */
+  }
+
+  .section {
+    padding-block-start: 50px;
+  }
+  
+  .section:first-of-type {
+    padding-block-start: 40px;
+  }
+  
+  .section:last-of-type {
+    padding-block-end: 40px;
+  }
+
+  .section-pictures {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 }
