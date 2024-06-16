@@ -10,7 +10,8 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --display-change: none;
-  --main-color: #353430;
+  --main-color: #fff1f7;
+  --main-font-color: #353430;
   --menu-main-color: #333430;
   --menu-buttons-outline-color: rgba(50 49 45 / .4);
   --text-background-color: #ff8dcb;
@@ -23,7 +24,8 @@
 @media (prefers-color-scheme: light) {
   .page.theme_auto {
     --display-change: none;
-    --main-color: #353430;
+    --main-color: #fff1f7;
+    --main-font-color: #353430;
     --menu-main-color: #333430;
     --menu-buttons-outline-color: rgba(50 49 45 / .4);
     --text-background-color: #ff8dcb;
